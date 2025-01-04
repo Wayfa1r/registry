@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Profiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Registered Animals</h1>
+          <div class="search-container">
+            <label for="search-input">Search: </label>
+             <input type="text" id="search-input" placeholder="Search by name or species">
+         </div>
+    </header>
+    <main>
+         <button id="back-button">Back to Registry</button>
+         <section id="animal-list">
+            <ul id="animal-list-ul">
+                <!-- Animal entries will be added here using JavaScript -->
+             </ul>
+         </section>
+         <div id="confirmation-modal" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to remove this profile?</p>
+                <button class="confirm-remove-button">Yes</button>
+                <button class="cancel-remove-button">No</button>
+             </div>
+         </div>
+    </main>
+    <footer>
+       <p>© 2023 Animal Registry</p>
+    </footer>
+  <script src="all-profiles.js"></script>
+</body>
+</html>

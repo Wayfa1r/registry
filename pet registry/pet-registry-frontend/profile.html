@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Animal Profile</h1>
+    </header>
+    <main id="profile-page-content">
+         <button id="back-button">Back to Registry</button>
+          <button id="edit-profile-button">Edit Profile</button>
+
+       <div class="tab-bar">
+         <button class="tab-button" data-tab="details-tab"  active>Details</button>
+         <button class="tab-button" data-tab="medical-tab">Medical</button>
+         <button class="tab-button" data-tab="paperwork-tab">Paperwork</button>
+          <button class="tab-button" data-tab="photos-tab">Photos</button>
+          <button class="tab-button" data-tab="general-info-tab">General Info</button>
+       </div>
+      <div id="general-info-tab" class="tab-content">
+            <!-- General info will be inserted here by javascript-->
+       </div>
+        <div id="details-tab" class="tab-content active">
+            <!-- Details content will be inserted here by javascript-->
+       </div>
+        <div id="medical-tab" class="tab-content">
+            <!-- Medical content will be inserted here by javascript-->
+      </div>
+       <div id="paperwork-tab" class="tab-content">
+        <h3>Paperwork</h3>
+          <input type="file" id="document-upload" accept=".pdf,.doc,.docx,image/*">
+        <button id="upload-document-button">Upload Document</button>
+        <div id="document-list">
+          <!-- Documents will be displayed here with JavaScript-->
+        </div>
+      </div>
+       <div id="photos-tab" class="tab-content">
+           <h3>Photos</h3>
+         <input type="file" id="photo-upload" accept="image/*" multiple>
+           <button id="upload-photo-button">Upload Photos</button>
+           <div id="photo-gallery">
+          <!-- Documents will be displayed here with JavaScript-->
+            </div>
+      </div>
+    </main>
+    <footer>
+       <p>© 2023 Animal Registry</p>
+    </footer>
+    <script src="profile.js"></script>
+</body>
+</html>

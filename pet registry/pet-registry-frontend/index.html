@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Registry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Animal Registry</h1>
+    </header>
+
+    <main>
+        <div class="main-tab-bar">
+            <button class="main-tab-button active" data-tab="animal-form-tab">Register a New Animal</button>
+            <button class="main-tab-button" data-tab="animal-list-tab">Registered Animals</button>
+        </div>
+        <section id="animal-form-tab" class="main-tab-content active">
+             <div class="form-header">
+                 <h2>Register a New Animal</h2>
+            </div>
+               <form id="registration-form">
+                   <div class="form-group short-input">
+                       <label for="id-number">ID Number:</label>
+                       <input type="text" id="id-number" name="id-number" required>
+                   </div>
+                <div class="form-group short-input">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                 <div class="form-group short-input">
+                     <label for="scientific-name">Scientific Name (Optional):</label>
+                      <input type="text" id="scientific-name" name="scientific-name">
+                 </div>
+                <div class="form-group short-input">
+                    <label for="species">Species:</label>
+                    <select id="species" name="species" required>
+                        <option value="">-- Select --</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="bird">Bird</option>
+                        <option value="fish">Fish</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group short-input">
+                    <label for="breed">Breed (Optional):</label>
+                    <input type="text" id="breed" name="breed">
+                </div>
+                 <div class="form-group short-input">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group short-input">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">-- Select --</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+                  <div class="form-group">
+                   <label for="spayed-neutered">Spayed/Neutered:</label>
+                    <input type="checkbox" id="spayed-neutered" name="spayed-neutered">
+                 </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                </div>
+                 <div class="form-group">
+                    <label for="vaccinations">Vaccinations (Optional):</label>
+                    <textarea id="vaccinations" name="vaccinations" rows="3"></textarea>
+                 </div>
+                 <div class="form-group">
+                    <label for="allergies">Allergies (Optional):</label>
+                   <textarea id="allergies" name="allergies" rows="3"></textarea>
+                 </div>
+                <div class="form-group">
+                    <label for="medications">Current Medications (Optional):</label>
+                     <textarea id="medications" name="medications" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="notes">Additional Medical Notes (Optional):</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                 </div>
+                <div class="form-group">
+                    <label for="photo">Photo (Optional):</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                <button type="submit">Register Animal</button>
+            </form>
+        </section>
+
+        <section id="animal-list-tab" class="main-tab-content">
+            <!-- Animal entries will be added here using JavaScript -->
+        </section>
+        <button onclick="handleRfidScan()">Scan Animal</button>
+    </main>
+   <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to remove this profile?</p>
+            <button class="confirm-remove-button">Yes</button>
+            <button class="cancel-remove-button">No</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Animal Registry</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
